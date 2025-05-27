@@ -38,7 +38,11 @@ A Windows Forms application that visualizes stock data using candlestick charts 
 
 ##  Example Output
 
-*(Add a screenshot here later)*
+<h2>📈 Example Output</h2>
+<p align="center">
+  <img src="Candlestick.png" alt="Candlestick chart sample" width="600">
+</p>
+
 
 ## Learnings & Highlights
 
