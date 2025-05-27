@@ -1,64 +1,79 @@
-# SmartCandlestick Analyzer
+# Fibonacci Wave Predictor 🔮📈
 
-A Windows Forms application that visualizes stock data using candlestick charts and analyzes market patterns like Doji, Hammer, Marubozu, Peaks, and Valleys.
+A C# Windows Forms application for advanced stock analysis using candlestick patterns, Fibonacci wave detection, and a custom "Beauty" function to predict future price movements.
 
-## Features
+## ✨ Features
 
-- Load daily, weekly, or monthly stock data from Yahoo Finance `.csv` files
-- Display OHLC candlestick charts and volume column plots
-- Detect bullish, bearish, and neutral patterns
-- Automatically identify and annotate Peaks (green) and Valleys (red)
-- Use dynamic Y-axis normalization for clear visuals
-- Multi-chart support — open new charts in separate windows
-- Built with `SmartCandlestick` class extending traditional OHLC modeling
+- Load OHLC stock data from Yahoo Finance (.csv format)
+- Visualize candlestick charts with dynamic chart normalization
+- Select custom waves between two candlesticks (using mouse or scrollbar)
+- Detect valid waves using Peak/Valley pattern logic
+- Compute and display Fibonacci levels inside the wave rectangle
+- Calculate “Beauty” — a predictive metric based on Fibonacci confirmations
+- Plot the function `Beauty(price)` to evaluate price prediction potential
+- Annotate confirmed Fibonacci touches and selected candlesticks
+- Support for daily, weekly, and monthly stock data
+- Multi-window chart display with persistent state and live updates
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="Candlestick.png" alt="Wave selection and pattern display" width="700">
+  <br>
+  <em>Wave selected with Fibonacci levels and confirmation dots</em>
+</p>
+
+<p align="center">
+  <img src="BeautyGraph.png" alt="Beauty function chart" width="700">
+  <br>
+  <em>Plot of Beauty(price) for wave prediction</em>
+</p>
 
 ## 🛠 Technologies
 
 - **Language:** C#
 - **Framework:** .NET Framework (Windows Forms)
-- **Data Binding:** Built-in WinForms data binding with custom models
-- **Charting:** System.Windows.Forms.DataVisualization
-- **UI Tools:** Windows Forms with modular UI elements
+- **Charting:** System.Windows.Forms.DataVisualization.Charting
+- **UI Tools:** WinForms, Mouse Events, Scrollbars, ToolTips
+- **Design:** OOP + Data Binding
 
-## Project Structure
-
-- `SmartCandlestick.cs`: Custom class with range and pattern detection
-- `Form_Main.cs`: Main chart and logic for file input, filtering, and rendering
-- `ChartHelpers.cs`: Methods for drawing annotations and normalizing charts
-- `Stock Data/`: Folder containing sample CSVs from Yahoo Finance
-
-## How to Run
-
-1. Open solution in **Visual Studio**
-2. Restore NuGet packages (if needed)
-3. Click **Start / Run**
-4. Use the OpenFileDialog to select a `.csv` stock data file
-
-> Example file names: `AAPL-Day.csv`, `GOOG-Week.csv`, `MSFT-Month.csv`
-
-##  Example Output
-
-<h2>📈 Example Output</h2>
-<p align="center">
-  <img src="Candlestick.png" alt="Candlestick chart sample" width="600">
-</p>
+## 📁 Folder Structure
+📦 OHLC-PatternDetector
+┣ 📂 Stock Data
+┣ 📂 Forms
+┣ 📜 SmartCandlestick.cs
+┣ 📜 BeautyAnalyzer.cs
+┣ 📜 MainForm.cs
+┣ 📜 README.md
+┣ 📸 Candlestick.png
+┣ 📸 BeautyGraph.png
+┗ 📜 OHLC-PatternDetector.sln
 
 
-## Learnings & Highlights
+## 🧠 About "Beauty"
 
-- Designed a full-featured stock analysis GUI with real-time updates
-- Used object-oriented inheritance to model financial data
-- Implemented a clean, user-friendly interface with pattern detection
-- Followed best practices in UI naming conventions and code commenting
+The **Beauty function** quantifies how well a selected wave aligns with its Fibonacci retracements:
+- Confirmations are counted when OHLC levels touch Fibonacci lines
+- Higher Beauty values suggest more consistent, reliable price patterns
+- This metric is plotted across predicted price ranges for better insights
 
-## Stock CSV Format
+## ⚙️ How to Use
 
-Expected input:
-Date,Open,High,Low,Close,Adj Close,Volume
-2023-01-03,125.07,130.00,124.17,129.41,129.41,98931200
-...
+1. Open the solution in **Visual Studio**
+2. Run the project and select a stock `.csv` file (e.g., `TSLA-Day.csv`)
+3. Click or drag to select two candlesticks forming a wave
+4. View Fibonacci lines and wave annotations
+5. Analyze the plotted `Beauty(price)` to estimate future lows or highs
+
+## 💡 Key Learning Outcomes
+
+- Implemented financial modeling with Fibonacci levels
+- Built predictive analytics into a traditional charting system
+- Applied OOP principles to encapsulate candlestick behaviors
+- Developed an intuitive and interactive WinForms UI
+
+## 📜 License
+
+Open-source for educational and demonstration purposes. MIT License.
 
 
-## License
-
-This project is open-source and available under the MIT License.
