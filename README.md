@@ -18,13 +18,13 @@ A C# Windows Forms application for advanced stock analysis using candlestick pat
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Candlestick.png" alt="Wave selection and pattern display" width="700">
+  <img src="Pattern.png" alt="Wave selection and pattern display" width="700">
   <br>
   <em>Wave selected with Fibonacci levels and confirmation dots</em>
 </p>
 
 <p align="center">
-  <img src="BeautyGraph.png" alt="Beauty function chart" width="700">
+  <img src="Price.png" alt="Beauty function chart" width="700">
   <br>
   <em>Plot of Beauty(price) for wave prediction</em>
 </p>
